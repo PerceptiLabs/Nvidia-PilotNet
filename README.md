@@ -3,6 +3,8 @@
 # Nvidia PilotNet
 Computer Vision is a key technology for building algorithms to enable self-driving cars. For this model, we've used PerceptiLabs to re-create Nvidia's end-to-end deep learning approach for mapping raw pixels using images captured from front-facing cameras mounted on a car. Each image has a corresponding steering angle associated with it that tells the position of the car's steering for that frame.
 
+**Note**: This model is not compatible with PerceptiLabs 0.12 as the UI and components have changed.
+
 To train this model, we have used [Udacity’s Car simulator](https://github.com/udacity/self-driving-car-sim) to collect the dataset. The car captures three pictures - left, center, right - for every single frame using the cameras that are fitted on the front of the car:
 
 ![](./carsim2.png)
@@ -36,14 +38,14 @@ Additionally, we have modified the code in our model's components so that each u
 
 # Structure
 This repo has the following structure:
-* **/PilotNet_Model**: contains the PerceptiLabs model file (model.json).
+* **/PilotNet_Model**: contains the PerceptiLabs model file (model.json) for use in PerceptiLabs v0.11.
 
 # Installation
 Follow the steps below to load and prepare the sample model in PerceptiLabs:
 
 1. Download the pre-processed data files from [here](https://drive.google.com/drive/folders/1A1OMeS86E86rZ4ViMlvNPcKsb95kaOgM?usp=sharing).
 2. Clone or download the sample model from GitHub.
-3. On PerceptiLabs' Model Hub screen, import the sample model into PerceptiLabs. When prompted for the model's folder, navigate to and select the location of the **model.json** file obtained in the previous step.
+3. On PerceptiLabs' Model Hub screen, import the sample model into PerceptiLabs. Note that this model is not compatible with PerceptiLabs 0.12 as the UI and components have changed. When prompted for the model's folder, navigate to and select the location of the **model.json** file obtained in the previous step.
 4. Open the topmost **Data** component in the model workspace and set its file to **NVIDIA_X.npy** that you downloaded in Step 1.
 5. Open the second **Data** component in the model workspace and set its file to **NVIDIA_Y.npy** that you downloaded in Step 1.
 
